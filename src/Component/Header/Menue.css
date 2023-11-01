@@ -1,0 +1,34 @@
+.menue {
+  height: calc(100vh - 80px);
+  width: 60%;
+  position: relative;
+  background-color: #d36666;
+  float: right;
+}
+.menue-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  font-size: 5vw;
+  font-weight: 600;
+  padding-left: 20vw;
+}
+.menue .menue-list li {
+  width: 100%;
+
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding-left: 0;
+  gap: 10px;
+}
+@media (max-width: 777) {
+  .menue,
+  .menue-list,
+  li {
+    display: none;
+    margin-right: 2vw;
+    padding-right: 2vw;
+  }
+}

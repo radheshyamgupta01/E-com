@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import Header from "./Component/Header/Header";
+import Menue from "./Component/Header/Menue";
+import Home from "./Component/Pages/Home"
 
+import Store from "./Component/Pages/Store";
+import ctx from "./Component/Contex/Ctx";
+import Contact from "./Component/Pages/Contact"
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ContactUs from "./Component/Pages/Contact"
+import Footer from "./Component/Pages/Footer";
+import Ragister from "./Component/Auth/Sign";
+// import CartModal from "./Component/Header/CartModal";
 function App() {
+  const { show } = useContext(ctx);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header></Header>
+    
+      {show && <Menue></Menue>}
+      <Switch>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
+        <Route path="/contact">
+        <ContactUs></ContactUs>
+        </Route>
+        <Route path="/store">
+          <Store></Store>
+        </Route>
+     
+        <Route path="/store">
+          <Store></Store>
+        </Route>
+        <Route path="/">
+        <Ragister></Ragister>
+        </Route>
+        
+      </Switch>
+      <Footer></Footer>
+    </BrowserRouter>
+    
   );
 }
 
