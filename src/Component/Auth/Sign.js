@@ -25,7 +25,7 @@ const Ragister = () => {
                 type="text"
                 id="username"
                 name="username"
-                className="mt-0 p-2 pl-8 w-full border rounded-md"
+                className="mt-0 p-2 pl-4 w-full border rounded-md"
                 placeholder="Enter your username"
               />
               <div className="absolute inset-y-0 left-0 flex items-center   ">
@@ -41,7 +41,7 @@ const Ragister = () => {
                 type="email"
                 id="email"
                 name="email"
-                className="mt-0 p-2 pl-8 w-full border rounded-md"
+                className="mt-0 p-2 pl-4 w-full border rounded-md"
                 placeholder="Enter your email"
               />
               <div className="absolute inset-y-0 left-0 flex items-center ">
@@ -60,7 +60,7 @@ const Ragister = () => {
                 type="password"
                 id="password"
                 name="password"
-                className="mt-0 p-2 pl-8 w-full border rounded-md"
+                className="mt-0 p-2 pl-4 w-full border rounded-md"
                 placeholder="Enter your password"
               />
               <div className="absolute inset-y-0  left-0 flex items-center">
@@ -77,7 +77,7 @@ const Ragister = () => {
                 type="password"
                 id="confirmPassword"
                 name="confirmPassword"
-                className="mt-0 p-2 pl-8 w-full border rounded-md"
+                className="mt-0 p-2 pl-4 w-full border rounded-md"
                 placeholder="Confirm your password"
               />
               <div className="absolute inset-y-0 left-0 flex items-center ">
