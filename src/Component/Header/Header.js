@@ -63,7 +63,7 @@ function Header() {
 
   return (
     <div className=" bg-black text-white   flex h-16 justify-between py-4">
-      <div className="left font-serif px-5 active:border-b-2  "> GENERIC </div>
+      <div className="left font-serif px-5 active:border-b-2 text-xl  "> GENERIC </div>
 
       <div className="header-menu-icon" onClick={displayHandler}>
         <i className="ri-menu-3-line"></i>
@@ -77,17 +77,17 @@ function Header() {
         </NavLink>
 
         <NavLink to="/store">
-          <li className="font-serif active:border-b-2 ">STORE</li>
+          <li className="font-serif active:border-b-2  text-xl">STORE</li>
         </NavLink>
         <NavLink to="/contact">
           <li>
-            <span className="font-serif active:border-b-2 ">CONTACT-US</span>
+            <span className="font-serif active:border-b-2  text-xl">CONTACT-US</span>
           </li>
         </NavLink>
 
         <li className=" cursor-pointer">
           <span
-            className="active:border-blue-500  border text-base border-sky-500  outline-1 p-1 rounded font-serif"
+            className="active:border-blue-500  border  border-sky-500 text-xl  outline-1 p-1 rounded font-serif"
             onClick={() => displayModalHandler()}
           >
             CART
@@ -96,7 +96,7 @@ function Header() {
 
         <NavLink to="/sign">
           <li>
-            <span className="font font-serif active:border-b-2 ">LOGOUT</span>
+            <span className="font font-serif active:border-b-2 text-xl">LOGOUT</span>
           </li>
         </NavLink>
       </ul>
