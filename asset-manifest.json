@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/radheshyamgupta01/E-com/static/css/main.f33af858.css",
+    "main.js": "/radheshyamgupta01/E-com/static/js/main.9480af88.js",
+    "static/js/787.c1112931.chunk.js": "/radheshyamgupta01/E-com/static/js/787.c1112931.chunk.js",
+    "index.html": "/radheshyamgupta01/E-com/index.html",
+    "main.f33af858.css.map": "/radheshyamgupta01/E-com/static/css/main.f33af858.css.map",
+    "main.9480af88.js.map": "/radheshyamgupta01/E-com/static/js/main.9480af88.js.map",
+    "787.c1112931.chunk.js.map": "/radheshyamgupta01/E-com/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f33af858.css",
+    "static/js/main.9480af88.js"
+  ]
+}
