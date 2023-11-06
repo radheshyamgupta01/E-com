@@ -10,6 +10,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ContactUs from "./Component/Pages/Contact"
 import Footer from "./Component/Pages/Footer";
 import Ragister from "./Component/Auth/Sign";
+import Login from "./Component/Auth/Login";
 // import CartModal from "./Component/Header/CartModal";
 function App() {
   const { show } = useContext(ctx);
@@ -28,13 +29,17 @@ function App() {
         <Route path="/store">
           <Store></Store>
         </Route>
-     
+        <Route path="/login">
+          <Login></Login>
+
+        </Route>
         <Route path="/store">
           <Store></Store>
         </Route>
         <Route path="/">
         <Ragister></Ragister>
         </Route>
+       
         
       </Switch>
       <Footer></Footer>
