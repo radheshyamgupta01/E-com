@@ -1,6 +1,49 @@
-import React from 'react';
+import React ,{useEffect, useState}from 'react';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Ragister = () => {
+let  [email,setEmail] =useState("")
+let [password,setPassword]=useState("")
+let [confirmPassword,setConfirmPassword]=useState("")
+let histrory=useHistory()
+const handleFormSubmit = async (e) => {
+  e.preventDefault();
+
+ 
+  if (password !== confirmPassword) {
+    
+    console.error("Passwords do not match");
+    return;
+  }
+
+  try {
+    const response = await fetch("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCGVdGoRUSBwzxrCKNk9zPE3Z1Sv4mM2lk ", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+        returnSecureToken:true
+      }),
+    });
+
+    const data = await response.json();
+    histrory.push("/store")
+
+    console.log(data); 
+
+   
+  } catch (error) {
+    console.error("Registration error:", error);
+
+  }
+};
+
+
+
+
   return (
     <div className="flex flex-col md:flex-row h-screen">
 
@@ -17,16 +60,20 @@ const Ragister = () => {
         <h1 className="text-2xl text-yello-500 font-serif font-black mb-4">Welcome to Generic  Shopping </h1>
 
     
-        <form className="w-full max-w-sm">
+        <form className="w-full max-w-sm" onSubmit={handleFormSubmit}>
           <div className="mb-4 ">
             <label htmlFor="username" className="block text-sm font-medium font-serif text-gray-600">Username</label>
             <div className="relative">
               <input
                 type="text"
                 id="username"
-                name="username"
+                required
+                name="username" 
+             
+                
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
                 placeholder="Enter your username"
+               
               />
               <div className="absolute inset-y-0 left-0 flex items-center   ">
               <i class="ri-user-2-fill"></i>
@@ -41,6 +88,8 @@ const Ragister = () => {
                 type="email"
                 id="email"
                 name="email"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
                 placeholder="Enter your email"
               />
@@ -59,7 +108,9 @@ const Ragister = () => {
               <input
                 type="password"
                 id="password"
+                value={password}
                 name="password"
+                onChange={(e)=>setPassword(e.target.value)}
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
                 placeholder="Enter your password"
               />
@@ -79,6 +130,8 @@ const Ragister = () => {
                 name="confirmPassword"
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
                 placeholder="Confirm your password"
+                value={confirmPassword}
+                onChange={(e)=>setConfirmPassword(e.target.value)}
               />
               <div className="absolute inset-y-0 left-0 flex items-center ">
               <i class="ri-lock-2-line"></i>

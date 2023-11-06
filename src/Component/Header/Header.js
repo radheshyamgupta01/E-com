@@ -87,7 +87,7 @@ function Header() {
 
         <li className=" cursor-pointer">
           <span
-            className="active:border-blue-500  border  border-sky-500 text-xl  outline-1 p-1 rounded font-serif"
+            className="active:border-blue-500  border  border-white text-xl  outline-1 p-1 rounded font-serif"
             onClick={() => displayModalHandler()}
           >
             CART
