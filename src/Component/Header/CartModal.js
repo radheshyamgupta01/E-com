@@ -1,7 +1,9 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import ctx from "../Contex/Ctx";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-const CartModal = ({ total }) => {
+const CartModal = ({ total }) => { 
+  const histrory=useHistory()
   let { arr, displayModal, setArr, isModal } = useContext(ctx);
   let totalPrice = 0;
   for (var i = 0; i < arr.length; i++) {
@@ -15,6 +17,7 @@ const CartModal = ({ total }) => {
   };
   let displayModalHandler = useCallback(() => {
     displayModal();
+    histrory.push("/store")
   }, [isModal]);
   return (
     <>
@@ -31,12 +34,7 @@ const CartModal = ({ total }) => {
             <div className="bg-white p-6 rounded-lg w-full max-w-md">
               <div className="mb-4 text-center">
                 <h2 className="text-2xl font-semibold font-serif">Cart</h2>
-                <button
-                  className="absolute top-0 right-0 p-2 text-gray-600 hover:text-gray-800"
-                  onClick={displayModal}
-                >
-                  <i class="ri-close-line"></i>
-                </button>
+               
               </div>
 
               <div className="mb-4">
@@ -77,7 +75,7 @@ const CartModal = ({ total }) => {
                 </button>
                 <button
                   className="bg-blue-500 text-white mx-10 px-8 py-2 rounded-md mt-4"
-                  onClick={displayModalHandler}
+                  onClick={()=>displayModalHandler()}
                 >
                   <i class="ri-close-line"></i>
                 </button>

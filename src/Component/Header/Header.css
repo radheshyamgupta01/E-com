@@ -71,3 +71,14 @@ body {
   }
 }
 
+ .topLeft{
+  position: relative;
+
+}
+.topLeft .up{
+  position: absolute;
+  top:-10px;
+  right:-10px;
+
+  font-weight: 800;
+}
