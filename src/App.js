@@ -14,6 +14,9 @@ import Login from "./Component/Auth/Login";
 import CartModal from "./Component/Header/CartModal";
 import Mdal from "./Component/Pages/Mdal";
 import Cart from "./Component/Pages/Cart";
+
+import TheGeneric from "./Component/Pages/TheGeneric";
+
 // import CartModal from "./Component/Header/CartModal";
 function App() {
   const { show } = useContext(ctx);
@@ -48,6 +51,7 @@ function App() {
       </Switch>
       <Footer></Footer>
     </BrowserRouter>
+   
   );
 }
 
