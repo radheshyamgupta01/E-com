@@ -7,7 +7,7 @@ import { BsCart3 } from "react-icons/bs";
 
 import "./Header.css";
 
-import Menue from "./Menue";
+// import Menue from "./Menue";
 
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
