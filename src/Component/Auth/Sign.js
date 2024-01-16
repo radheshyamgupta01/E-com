@@ -72,12 +72,10 @@ const handleFormSubmit = async (e) => {
              
                 
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
-                placeholder="Enter your username"
+                placeholder="Enter  username"
                
               />
-              <div className="absolute inset-y-0 left-0 flex items-center   ">
-              <i class="ri-user-2-fill"></i>
-              </div>
+              
             </div>
           </div>
 
@@ -91,11 +89,9 @@ const handleFormSubmit = async (e) => {
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
-                placeholder="Enter your email"
+                placeholder="Enter  email"
               />
-              <div className="absolute inset-y-0 left-0 flex items-center ">
-              <i class="ri-mail-line"></i>
-              </div>
+             
             </div>
           </div>
 
@@ -105,6 +101,7 @@ const handleFormSubmit = async (e) => {
           <div className="mb-4">
             <label htmlFor="password" className="block text-sm font-medium font-serif text-gray-600">Password</label>
             <div className="relative">
+           
               <input
                 type="password"
                 id="password"
@@ -112,11 +109,9 @@ const handleFormSubmit = async (e) => {
                 name="password"
                 onChange={(e)=>setPassword(e.target.value)}
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
-                placeholder="Enter your password"
+                placeholder="Enter  password"
               />
-              <div className="absolute inset-y-0  left-0 flex items-center">
-              <i class="ri-lock-2-line"></i>
-              </div>
+              
             </div>
           </div>
 
@@ -129,13 +124,11 @@ const handleFormSubmit = async (e) => {
                 id="confirmPassword"
                 name="confirmPassword"
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
-                placeholder="Confirm your password"
+                placeholder="Confirm  password"
                 value={confirmPassword}
                 onChange={(e)=>setConfirmPassword(e.target.value)}
               />
-              <div className="absolute inset-y-0 left-0 flex items-center ">
-              <i class="ri-lock-2-line"></i>
-              </div>
+              
             </div>
           </div>
 

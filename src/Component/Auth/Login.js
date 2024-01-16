@@ -72,11 +72,9 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
-                placeholder="Enter your email"
+                placeholder="Enter  email"
               />
-              <div className="absolute inset-y-0 left-0 flex items-center ">
-                <i class="ri-mail-line"></i>
-              </div>
+            
             </div>
           </div>
 
@@ -95,11 +93,9 @@ const Login = () => {
                 name="password"
                 onChange={(e) => setPassword(e.target.value)}
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
-                placeholder="Enter your password"
+                placeholder="Enter  password"
               />
-              <div className="absolute inset-y-0  left-0 flex items-center">
-                <i class="ri-lock-2-line"></i>
-              </div>
+            
             </div>
           </div>
 
@@ -116,13 +112,11 @@ const Login = () => {
                 id="confirmPassword"
                 name="confirmPassword"
                 className="mt-0 p-2 pl-4 w-full border rounded-md"
-                placeholder="Confirm your password"
+                placeholder="Confirm  password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
-              <div className="absolute inset-y-0 left-0 flex items-center ">
-                <i class="ri-lock-2-line"></i>
-              </div>
+             
             </div>
           </div>
 

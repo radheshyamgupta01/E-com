@@ -82,7 +82,7 @@ function Header() {
               </li>
             </NavLink>
 
-            <NavLink to="/logout" activeClassName="active">
+            <NavLink to="/login" activeClassName="active">
               <li>
                 <span className="font-serif">LOGOUT</span>
               </li>
