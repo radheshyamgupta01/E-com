@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../Header/Header';
 
 
 const ContactUs = () => {
   return (
+    <>
+    <Header></Header>
+    
+
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full sm:w-96">
         <h2 className="text-2xl font-bold font-serif mb-6">Contact Us</h2>
@@ -77,6 +82,7 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

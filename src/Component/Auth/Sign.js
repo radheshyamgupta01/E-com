@@ -49,7 +49,7 @@ const handleFormSubmit = async (e) => {
 
       <div className="md:w-1/2 h-full">
         <img
-          src="https://images.unsplash.com/photo-1584908917822-6799d69a72cc?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXx0WGpjZmVYNFhnWXx8ZW58MHx8fHx8"
+          src="https://img.freepik.com/free-photo/view-3d-boy-using-laptop_23-2150709886.jpg?size=626&ext=jpg&ga=GA1.1.25593491.1698475769&semt=sph"
           alt="Your Image"
           className="w-full h-full object-cover"
         />

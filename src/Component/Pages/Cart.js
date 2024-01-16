@@ -2,11 +2,15 @@ import React from 'react';
 import Mdal from './Mdal';
 import { useContext } from 'react';
 import ctx from '../Contex/Ctx';
+import Header from '../Header/Header';
 
 function Cart() {
   let { arr } = useContext(ctx);
 
   return (
+    <>
+    <Header></Header>
+  
     <div className='bg-slate-600 flex items-center justify-center h-screen'>
       {arr.length > 0 ? (
         <Mdal />
@@ -17,6 +21,7 @@ function Cart() {
         </div>
       )}
     </div>
+    </>
   );
 }
 
