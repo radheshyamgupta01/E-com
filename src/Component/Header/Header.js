@@ -1,13 +1,10 @@
 import React, { useCallback, useContext, useState } from "react";
-import { VscHistory, VscHome, VscMail } from "react-icons/vsc";
-import { BsDiamond, BsExclude } from "react-icons/bs";
-import { BsCartDash } from "react-icons/bs";
-import { VscLayers } from "react-icons/vsc";
-import { FaStore } from "react-icons/fa";
+import { VscHome, VscMail } from "react-icons/vsc";
+import { BsDiamond } from "react-icons/bs";
+
 import { BsArrowDownSquare } from "react-icons/bs";
 import { BsCart3 } from "react-icons/bs";
-import { BsFillCartDashFill } from "react-icons/bs";
-import { BsFillArrowDownSquareFill } from "react-icons/bs";
+
 import "./Header.css";
 
 import Menue from "./Menue";
@@ -52,7 +49,7 @@ function Header() {
 
           <NavLink to="/store">
             <li className="font-serif text-xl  me-2 ms-2 flex">
-            <BsDiamond  size={32}/> Store
+              <BsDiamond size={32} /> Store
             </li>
           </NavLink>
 
@@ -78,7 +75,7 @@ function Header() {
 
           <li className="relative" onClick={closeDropdown}>
             <span className="font font-serif text-xl cursor-pointer flex">
-            <BsArrowDownSquare  size={32}/>
+              <BsArrowDownSquare size={32} />
             </span>
             {isDropdownOpen && (
               <ul className="absolute left-0 mt-2 bg-gray-100 text-black p-2 z-50">
