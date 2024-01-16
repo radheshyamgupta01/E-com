@@ -9,7 +9,7 @@ export default function Home() {
     <Header></Header>
     <div className="w-full   ">
      
-      <div className="w-full bg-gray-50 ">
+      <div className="w-full bg-gray-50 " style={{ borderBottom: "1px solid black" }}>
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between  p-8">
           <div class="w-full lg:w-1/2 mb-4 lg:mb-0">
             <h2 class="text-3xl text-black font-bold mb-2 font-serif">JUL16</h2>
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full bg-gray-50 ">
+      <div className="w-full bg-gray-50 " style={{ borderBottom: "1px solid black" }}>
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between  p-8">
           <div class="w-full lg:w-1/2 mb-4 lg:mb-0">
             <h2 class="text-3xl text-black font-bold mb-2 font-serif">JUL16</h2>
@@ -45,13 +45,13 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full bg-gray-50 border-b-black " style={{ borderBottom: "1px solid black" }}>
-        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between p-8">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between p-8" style={{ borderBottom: "1px solid black" }}>
           <div class="w-full lg:w-1/2 mb-4 lg:mb-0">
             <h2 class="text-3xl text-black font-bold mb-2 font-serif">JUL16</h2>
             <h2 class="text-xl text-black font-serif">DETROIT, MI</h2>
           </div>
 
-          <div class="w-full lg:w-1/2">
+          <div class="w-full lg:w-1/2" >
             <h2 class="text-3xl text-black font-bold mb-2 font-serif">
               DTE ENERGY MUSIC THEATRE
             </h2>
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full bg-green-gray-50  border-b-black">
+        <div className="w-full bg-green-gray-50  border-b-black" style={{ borderBottom: "1px solid black" }}>
           <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between  p-8">
             <div class="w-full lg:w-1/2 mb-4 lg:mb-0">
               <h2 class="text-3xl text-black font-bold mb-2 font-serif" >JUL16</h2>
