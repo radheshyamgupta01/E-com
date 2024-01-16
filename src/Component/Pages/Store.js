@@ -4,6 +4,7 @@ import CartModal from "../Header/CartModal";
 import Mdal from "./Mdal";
 import ctx from "../Contex/Ctx";
 import TheGeneric from "./TheGeneric";
+import Footer from "./Footer";
 const Store = () => {
   const { displayModal, isModal } = useContext(ctx);
 
@@ -112,6 +113,7 @@ const Store = () => {
 
   return (
     <>
+    <Header></Header>
       {isModal && <Mdal total={total}></Mdal>}
       <TheGeneric></TheGeneric>
       <div className="container mx-auto">
@@ -141,6 +143,7 @@ const Store = () => {
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };

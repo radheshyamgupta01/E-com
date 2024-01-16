@@ -24,7 +24,7 @@ function Header() {
    setIsDropdownOpen(!isDropdownOpen);
   };
   return (
-  
+    <>
     <div className="bg-black text-white font-serif flex h-16 justify-between py-4">
     <div className="left font-serif px-5 active:border-b-2 text-xl">
       {" "}
@@ -92,8 +92,9 @@ function Header() {
       </li>
     </ul>
   </div>
+  
 
-
+</>
   );
 }
 

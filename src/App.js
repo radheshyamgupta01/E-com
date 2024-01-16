@@ -22,7 +22,7 @@ function App() {
   const { show } = useContext(ctx);
   return (
     <BrowserRouter>
-      <Header></Header>
+    
 
       {show && <Menue></Menue>}
       <Switch>
@@ -49,7 +49,7 @@ function App() {
           <Ragister></Ragister>
         </Route>
       </Switch>
-      <Footer></Footer>
+     
     </BrowserRouter>
    
   );
