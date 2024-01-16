@@ -31,7 +31,7 @@ function Header() {
   };
   return (
     <>
-      <div className="bg-gray-500 shadow text-black font-serif flex h-16 justify-between py-4 border-b-blue-400">
+      <div className="bg-gray-200 shadow text-black font-serif flex h-16 justify-between py-4 border-b-blue-400">
         <div className="left font-serif px-5 active:border-b-2 text-xl">
           {" "}
           GENERIC{" "}
