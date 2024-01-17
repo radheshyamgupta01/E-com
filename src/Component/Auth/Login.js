@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Login = () => {
   let [email, setEmail] = useState("");
+  let [Alert,setAlert]=useState(false)
   let [password, setPassword] = useState("");
   let [confirmPassword, setConfirmPassword] = useState("");
   let histrory = useHistory();
@@ -31,8 +32,38 @@ const Login = () => {
       );
 
       const data = await response.json();
+      if(response.ok){
+        setAlert(true)
+          // Function to speak the success message
+  function speakSuccessMessage() {
+    const successMessageElement = document.getElementById('successMessage');
+    
+    // Check if the Web Speech API is supported
+    if ('speechSynthesis' in window) {
+      // Create a SpeechSynthesisUtterance object
+      const speechMessage = new SpeechSynthesisUtterance();
+      
+      // Set the text to be spoken
+      speechMessage.text =  "Congratulations Sir! Your login is successful."
+      
+      // Speak the message
+      window.speechSynthesis.speak(speechMessage);
+    } else {
+      // Web Speech API is not supported
+      console.error('Web Speech API is not supported in this browser.');
+    }
+  }
 
-      histrory.push("/store");
+  // Call the function to speak the success message
+  speakSuccessMessage();
+
+
+        setTimeout(() => {
+          histrory.push("/store");
+        },7000);
+      }
+
+   
 
       console.log(data);
     } catch (error) {
@@ -52,7 +83,33 @@ const Login = () => {
 
       <div className="md:w-1/2 flex flex-col justify-center items-center p-8 bg-gray-100">
         <h1 className="text-2xl text-yello-500 font-serif font-black mb-4">
-          {" "}
+        {Alert && (
+          <div class="font-regular relative block w-full rounded-lg bg-green-500 p-4 text-base leading-5 text-white">
+            <div class="mr-12" id="successMessage"> Login successfully</div>
+            <div class="absolute top-2.5 right-3 w-max rounded-lg transition-all hover:bg-white hover:bg-opacity-20">
+              <button
+                role="button"
+                class="w-max rounded-lg p-1"
+               
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
           Login{" "}
         </h1>
 
